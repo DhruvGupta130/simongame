@@ -32,7 +32,7 @@ function check(index){
             }
         }
     else{
-        h.innerHTML="Game Over! Your Score is "+i+". High Score is "+j+".<br> Press any Key to Start a New Game";
+        h.innerHTML="Game Over! Your Score is "+i+". High Score is "+j+".<br> Click to Start a New Game";
         document.querySelector("*").style.backgroundColor="red";
         document.querySelector(".boxes").style.backgroundColor="red";
         audio.play();
