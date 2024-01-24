@@ -5,7 +5,7 @@ start=false;
 let i=1,j=0;
 let h=document.querySelector("h2");
 let audio=document.getElementById("game_over");
-document.addEventListener("keypress",function(){
+document.addEventListener("click",function(){
     if(start==false){
         h.innerText="Level "+i;
         setTimeout(auto,800);
