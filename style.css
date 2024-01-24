@@ -1,0 +1,52 @@
+*{
+    text-align: center;
+    background-color: bisque;
+}
+h1{
+    text-decoration: underline;
+    color: brown;
+    margin: 1.5em;
+}
+h2{
+    color: rgb(54, 1, 10);
+}
+.boxes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.red{
+    background-color: rgb(202, 75, 24);
+    border: 5px solid black;
+    border-radius: 15%;
+    height: 10rem;
+    width: 10rem;
+    margin: 5px;
+}
+.yellow{
+    background-color: rgb(209, 226, 22);
+    border: 5px solid black;
+    border-radius: 15%;
+    height: 10rem;
+    width: 10rem;
+    margin: 5px;
+}
+.blue{
+    background-color: rgb(121, 11, 223);
+    border: 5px solid black;
+    border-radius: 15%;
+    height: 10rem;
+    width: 10rem;
+    margin: 5px;
+}
+.green{
+    background-color: rgb(47, 255, 54);
+    border: 5px solid black;
+    border-radius: 15%;
+    height: 10rem;
+    width: 10rem;
+    margin: 5px;
+}
+.flash{
+    background-color: white;
+}
