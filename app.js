@@ -5,7 +5,7 @@ start=false;
 let i=1,j=0;
 let h=document.querySelector("h2");
 let audio=document.getElementById("game_over");
-document.addEventListener("click",function(){
+document.addEventListener("keypress",function(){
     if(start==false){
         h.innerText="Level "+i;
         setTimeout(auto,800);
@@ -32,7 +32,7 @@ function check(index){
             }
         }
     else{
-        h.innerHTML="Game Over! Your Score is "+i+". High Score is "+j+".<br> Click to Start a New Game";
+        h.innerHTML="Game Over! Your Score is "+i+". High Score is "+j+".<br> Press any Key to Start a New Game";
         document.querySelector("*").style.backgroundColor="red";
         document.querySelector(".boxes").style.backgroundColor="red";
         audio.play();
