@@ -5,12 +5,14 @@ start=false;
 let i=1,j=0;
 let h=document.querySelector("h2");
 let audio=document.getElementById("game_over");
-document.addEventListener("keypress",function(){
+let button=document.querySelector("button");
+button.addEventListener("click",function(){
     if(start==false){
         h.innerText="Level "+i;
         setTimeout(auto,800);
         start=true;
-        audio.pause()
+        button.innerText="Restart";
+        button.classList.add("hide");
     }
 });
 function btnflash(btn) {
@@ -24,15 +26,16 @@ function check(index){
             if(userseq.length==gameseq.length){
                 setTimeout(i++,1000);
                 h.innerText="Level "+i;
-                if(i>j){
-                    j=i;
+                if(i>=j){
+                    j=i-1;
                 }
                 userseq=[];
                 setTimeout(auto,800);
             }
         }
     else{
-        h.innerHTML="Game Over! Your Score is "+i+". High Score is "+j+".<br> Press any Key to Start a New Game";
+        button.classList.remove("hide");
+        h.innerHTML="Game Over! Your Score is "+(i-1)+". <Font color='Blue'>High Score is "+j+"</Font>";
         document.querySelector("*").style.backgroundColor="red";
         document.querySelector(".boxes").style.backgroundColor="red";
         audio.play();
@@ -41,7 +44,7 @@ function check(index){
     }
 }
 function auto(){
-    let rand=Math.floor(Math.random()*4);
+    let rand=Math.ceil(Math.random()*4-1);
     let color=btn[rand];
     let button=document.querySelector("."+color);
     gameseq.push(color);

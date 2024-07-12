@@ -50,3 +50,16 @@ h2{
 .flash{
     background-color: white;
 }
+button{
+    margin: 1rem;
+    font-size: 1rem;
+    padding: 1rem;
+    color: #CDFADB;
+    width: 10rem;
+    background-color: #436850;
+    border: 2px solid #CDFADB;
+    border-radius: 1rem;
+}
+.hide{
+    display: none;
+}
