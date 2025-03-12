@@ -32,10 +32,11 @@ function check(index){
                 userseq=[];
                 setTimeout(auto,800);
             }
+            localStorage.setItem("HS",j);
         }
     else{
         button.classList.remove("hide");
-        h.innerHTML="Game Over! Your Score is "+(i-1)+". <Font color='Blue'>High Score is "+j+"</Font>";
+        h.innerHTML="Game Over! Your Score is "+(i-1)+". <Font color='Blue'>High Score is "+localStorage.getItem("HS")+"</Font>";
         document.querySelector("*").style.backgroundColor="red";
         document.querySelector(".boxes").style.backgroundColor="red";
         audio.play();
